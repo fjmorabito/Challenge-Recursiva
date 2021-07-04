@@ -1,13 +1,15 @@
 * {
+  font-family: "Segoe UI";
+
   margin: 0;
   padding: 0;
-  font-family: "Segoe UI";
 }
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
   margin: 0;
+
+  -webkit-appearance: none;
 }
 
 a {
@@ -21,114 +23,141 @@ ul {
 /* Portada Screen */
 
 .cover-page {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+
+  width: 100%;
+
   background-image: url(./images/portada.png);
   background-size: 100% 100%;
-  position: fixed;
-  width: 100%;
-  top: 0%;
-  bottom: 0%;
 }
 
 .logo {
-  width: 10%;
   position: absolute;
-  left: 5.2%;
   top: 3.2%;
+  left: 5.2%;
+
+  width: 10%;
 }
 
 .shop-button {
-  background-color: #f7395f;
-  color: #ffffff;
-  border: 0px;
-  height: 5.5%;
-  width: 11.5%;
-  min-width: 110px;
   font-size: 20px;
   font-weight: 400;
+
   position: absolute;
-  left: 44.25%;
-  right: 44.25%;
   bottom: 5.5%;
+  left: calc(50% - (var(--w) / 2));
+
+  width: 11.5%;
+  height: 5.5%;
+
   cursor: pointer;
+
+  color: #fff;
+  border: 0;
+  background-color: #f7395f;
+
+  --w: 11.5%;
 }
 
 .screen-title {
   font-size: 30px;
-  margin-left: 8.5%;
-  color: #555555;
   font-weight: 400;
+
   margin-top: 2%;
+  margin-left: 8.5%;
+
   text-transform: capitalize;
+
+  color: #555;
 }
 
 /* shop screen */
 
 .logo-banner {
-  width: 135px;
-  height: 135px;
   position: relative;
   left: 7%;
+
+  width: 135px;
+  height: 135px;
 }
 
 .banner1 {
+  display: flex;
+
   width: 100%;
   height: 175px;
+
   background-image: url(./images/banner1.png);
-  display: flex;
+
   align-items: center;
 }
 
 .cards-box-container {
   display: grid;
+
+  margin-right: 8%;
+  margin-left: 8%;
+
   grid-template-columns: repeat(4, minmax(320px, 1fr));
   grid-template-rows: repeat(2, minmax(320px, 1fr));
   row-gap: 2%;
   column-gap: 1%;
-  margin-left: 8%;
-  margin-right: 8%;
   align-items: center;
 }
 
 /*Shopping Screen*/
 .banner2 {
+  display: flex;
+
+  height: 175px;
+
   background-image: url(./images/banner2.png);
   background-size: 100% 100%;
-  height: 175px;
-  display: flex;
+
   align-items: center;
 }
 
 .navbar-shopping {
-  background-color: #e9e9e9;
-  margin-top: 35px;
-  height: 185px;
   display: flex;
   flex-direction: row;
+
+  height: 185px;
+  margin-top: 35px;
+  padding-right: 30px;
+  padding-left: 30px;
+
+  background-color: #e9e9e9;
+
   align-items: center;
   justify-content: space-around;
-  padding-left: 30px;
-  padding-right: 30px;
 }
 
 .navbar-image {
   width: 10%;
+  cursor: pointer;
 }
 
 .card-container {
   display: flex;
+
   flex-wrap: wrap;
 }
 
 /*Card*/
 
 .card-box {
+  display: flex;
+  flex-direction: column;
+
+  width: 320px;
+
   background-image: url(./images/cuadro-boton.png);
   background-repeat: no-repeat;
   background-size: cover;
-  display: flex;
-  flex-direction: column;
+
   align-items: center;
-  width: 320px;
 }
 
 .pepe {
@@ -137,26 +166,32 @@ ul {
 }
 
 .card-title {
-  color: #555555;
   font-size: 19px;
   font-weight: 700;
-  text-transform: uppercase;
+
   margin-bottom: 10%;
+
+  text-transform: uppercase;
+
+  color: #555;
 }
 
 .card-image {
   width: 80%;
-  margin-left: auto;
   margin-right: auto;
+  margin-left: auto;
 }
 
 .card-items-container {
   display: flex;
+
   align-items: center;
 }
 
 .product-image {
   width: 65%;
+  max-width: 190px;
+  margin-top: 3%;
 }
 /*Buttons*/
 
@@ -169,39 +204,52 @@ ul {
 }
 
 .button-class {
-  outline: none;
-  color: #ffffff;
   font-size: 18px;
+  font-weight: 400;
+
   width: 200px;
+  margin: 10px;
+  padding: 5px;
+
+  cursor: pointer;
+  text-transform: capitalize;
+
+  color: #fff;
   border: none;
   border-radius: 10px;
-  text-transform: capitalize;
-  align-items: center;
-  font-weight: 400;
+  outline: none;
   box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.1);
-  padding: 5px;
-  margin: 10px;
-  cursor: pointer;
+
+  align-items: center;
 }
 
 .buttons-container {
-  width: 28%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+
+  width: 28%;
+  --w: 28%;
   margin: auto;
+
+  justify-content: space-between;
+  position: absolute;
+  left: calc(50% - (var(--w) / 2));
+  bottom: 2%;
 }
 
 /* Product screen */
 .all-content {
   display: flex;
+
   justify-content: center;
 }
 
 .product-content {
-  height: 80%;
   display: flex;
   flex-direction: row;
+
+  height: 80%;
+
   align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -210,6 +258,7 @@ ul {
 .col-1 {
   display: flex;
   flex-direction: row;
+
   margin-right: 25px;
 }
 
@@ -219,20 +268,23 @@ ul {
 }
 
 .img-medium {
+  width: 100%;
   min-width: 300px;
   max-width: 300px;
-  width: 100%;
-  margin-left: 5%;
   margin-top: 5%;
+  margin-left: 5%;
+
   border: 2px #a2a2a2 solid;
   border-radius: 10px;
 }
 
 .button-product-screen {
+  display: flex;
+
   margin-top: 10%;
   margin-left: auto;
   margin-left: auto;
-  display: flex;
+
   justify-content: center;
 }
 
@@ -246,74 +298,87 @@ ul {
 }
 
 .product-info p {
-  color: #000000;
+  color: #000;
 }
 .cards-box-container-products {
+  display: flex;
+
+  margin-right: 8%;
+  margin-left: 8%;
+  padding-right: 90px;
+
   grid-template-columns: repeat(4, minmax(320px, 1fr));
   grid-template-rows: repeat(1, minmax(320px, 1fr));
   row-gap: 2%;
   column-gap: 1%;
-  margin-left: 8%;
-  margin-right: 8%;
-  display: flex;
   align-items: center;
-  padding-right: 90px;
 }
 
 .detail-button {
-  width: 70px;
   font-size: 15px;
+
+  width: 70px;
 }
 /* Payment Screen */
 .payment-page {
   display: flex;
+
   justify-content: center;
 }
 
 .logo-payment {
-  width: 9%;
   position: absolute;
-  left: 2.7%;
   top: 5.4%;
+  left: 2.7%;
+
+  width: 9%;
 }
 
 .forms-container {
   display: flex;
-  width: 60%;
-  margin-left: auto;
-  margin-right: auto;
   flex-direction: column;
+
+  width: 60%;
+  margin-right: auto;
+  margin-left: auto;
+
   justify-content: space-between;
 }
 
 .form-1-container {
-  border: none;
-  border-radius: 15px;
-  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+
+  box-sizing: border-box;
   height: 15.3%;
   margin-top: 5.5%;
   margin-bottom: 3%;
+  padding-left: 7.6%;
+
+  border: none;
+  border-radius: 15px;
+  background-color: #fff;
   box-shadow: 5px;
-  display: flex;
-  flex-direction: row;
+
   justify-content: space-between;
   align-items: center;
-  padding-left: 7.6%;
-  box-sizing: border-box;
 }
 
 .form-2-container {
-  border: none;
-  border-radius: 15px;
-  height: 72%;
-  background-color: #ffffff;
-  margin-bottom: 4%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  padding-left: 7.6%;
+
+  height: 72%;
+  margin-bottom: 4%;
   padding-right: 9%;
+  padding-left: 7.6%;
+
+  border: none;
+  border-radius: 15px;
+  background-color: #fff;
   box-shadow: 5px;
+
+  justify-content: space-around;
 }
 
 .currency-container {
@@ -322,40 +387,48 @@ ul {
 }
 
 .currency-container button {
-  margin-left: 5px;
-  margin-top: 3px;
   font-size: 10px;
+
+  margin-top: 3px;
+  margin-left: 5px;
 }
 
 .payment-title {
   font-size: 28px;
-  color: #555555;
   font-weight: 400;
+
   letter-spacing: -1px;
+
+  color: #555;
 }
 
 .total-payment {
   font-size: 35px;
-  letter-spacing: -2px;
-  color: #555555;
   font-weight: 700;
+
+  letter-spacing: -2px;
+
+  color: #555;
 }
 
 .button-cont {
   display: flex;
   flex-direction: column;
+
   margin-right: 9%;
 }
 
 .input-label-container {
   display: flex;
   flex-direction: column;
+
   justify-content: space-around;
 }
 
 .tarjetas-container {
   display: flex;
   flex-direction: row;
+
   justify-content: space-between;
   align-items: center;
 }
@@ -363,44 +436,54 @@ ul {
 .li-item {
   display: flex;
   flex-direction: column;
-  margin-top: 3px;
+
   height: 9%;
+  margin-top: 3px;
 }
 
 .form-label {
   font-size: 18px;
+
   display: block;
+  overflow: hidden;
+
+  min-width: auto;
+
   white-space: nowrap;
   text-overflow: ellipsis;
-  overflow: hidden;
-  min-width: auto;
 }
 
 .form-label::after {
-  content: "*";
-  color: red;
   float: right;
+
+  content: "*";
+
+  color: red;
 }
 
 .form-input {
+  font-size: 15px;
+
   height: 48px;
-  background-color: #f8f8f8f8;
-  border: 2px #a2a2a2;
-  padding-left: 5px;
   padding-top: 10px;
   padding-bottom: 10px;
-  font-size: 15px;
+  padding-left: 5px;
+
+  border: 2px #a2a2a2;
+  background-color: #f8f8f8f8;
 }
 
 .short {
+  font-size: 15px;
+
   width: 10%;
   height: 20px;
-  font-size: 15px;
 }
 
 .input2 {
   display: flex;
   flex-direction: row;
+
   align-items: center;
 }
 
@@ -413,22 +496,24 @@ ul {
 }
 
 .payment-button-container {
-  margin-left: auto;
   margin-right: auto;
+  margin-left: auto;
 }
 
 @media screen and (max-width: 1580px) {
   .tarjetas-container {
     flex-direction: column;
-    justify-content: center;
+
     height: 35%;
+
+    justify-content: center;
   }
 
   .form-input {
     height: 20px;
-    padding-left: 5px;
     padding-top: 5px;
     padding-bottom: 5px;
+    padding-left: 5px;
   }
 
   .tarjeta1 {
@@ -439,10 +524,10 @@ ul {
   }
 
   .tarjeta2 {
-    margin-left: 10px;
     width: 80%;
-    max-height: 110px;
     max-width: 650px;
+    max-height: 110px;
+    margin-left: 10px;
   }
 
   .input-label-container {
@@ -451,6 +536,9 @@ ul {
 }
 
 @media screen and (max-width: 1000px) {
+  .shop-button {
+    font-size: 15px;
+  }
   .product-content {
     flex-direction: column;
   }
@@ -463,6 +551,11 @@ ul {
     width: 100px;
     height: 100px;
   }
+
+  /*Product Screen*/
+  .img-medium {
+    min-width: 100px;
+  }
 }
 
 @media screen and (max-width: 900px) {
@@ -472,6 +565,7 @@ ul {
 
   .shop-button {
     font-size: 15px;
+
     bottom: 17%;
   }
 
@@ -489,30 +583,36 @@ ul {
   }
 
   .form-2-container .button-class {
-    width: 50px;
     font-size: 11px;
+
+    width: 50px;
   }
 
   .form-1-container {
-    justify-content: space-around;
-    padding-left: 0%;
-    align-items: center;
     height: 20%;
+    padding-left: 0;
+
+    justify-content: space-around;
+    align-items: center;
   }
 
   .form-1-container .button-class {
-    width: 100px;
     font-size: 11px;
+
+    width: 100px;
   }
 
   .form-1-container .button-cont {
-    margin-right: 0%;
+    margin-right: 0;
+  }
+  .button-cont {
+    flex-direction: row;
   }
   .form-input {
     height: 20px;
-    padding-left: 5px;
     padding-top: 5px;
     padding-bottom: 5px;
+    padding-left: 5px;
   }
 
   .payment-page {
@@ -522,12 +622,9 @@ ul {
 
   .logo-payment {
     position: static;
+
     width: 12.5%;
     padding-left: 12%;
-  }
-
-  .button-cont {
-    flex-direction: row;
   }
 
   .form-1-container {
@@ -537,22 +634,29 @@ ul {
   .result {
     display: flex;
     flex-direction: row;
+    justify-content: center;
   }
 
   .result p {
     font-size: 20px;
-    margin-right: 10px;
     font-weight: 400;
+
+    margin-right: 10px;
   }
 }
 
 @media screen and (max-width: 750px) {
+  .shop-button {
+    font-size: 12px;
+  }
+
   .img-medium {
     min-width: 100px;
   }
 
+  /*Product Screen*/
   .product-info h2 {
-    font-size: 10px;
+    font-size: 13px;
   }
 
   .logo-banner {
@@ -562,5 +666,45 @@ ul {
 
   .banner2 {
     height: 100px;
+    background-image: url(./images/baner-mobile2.png);
+  }
+
+  /*Payment Screen */
+}
+
+@media screen and (max-width: 550px) {
+  /*Main Screen*/
+  .shop-button {
+    font-size: 10px;
+
+    min-width: 70px;
+
+    --w: 70px;
+  }
+
+  /*Product Screen */
+  .button-product-screen .button-class {
+    font-size: 13px;
+  }
+
+  /*Payment Screen */
+  .form-1-container .button-class {
+    font-size: 9px;
+    width: 80px;
+  }
+
+  .form-1-container .payment-title,
+  .form-2-container .payment-title,
+  .form-1-container .total-payment {
+    font-size: 15px;
+  }
+
+  .form-label {
+    font-size: 10px;
+  }
+
+  .form-input {
+    font-size: 12px;
+    height: 15px;
   }
 }

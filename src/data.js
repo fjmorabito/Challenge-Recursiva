@@ -90,12 +90,30 @@ const data = {
         },
         {
             _id: '6',
-            name: 'Bebidas varias',
+            name: ' Gaseosas chicas',
             price: 90,
             category: 'bebidas',
             image: '../images/bebidas.png',
             aditional: '../images/altbebidas.png',
-            description: 'Variedad de marcas y sabores. En formato de medio y hasta 3 litros.'
+            description: 'Variedad de marcas y sabores. En formato de medio litro.'
+        },
+        {
+            _id: '7',
+            name: 'Gaseosas grandes',
+            price: 90,
+            category: 'bebidas',
+            image: '../images/bebidas.png',
+            aditional: '../images/altbebidas.png',
+            description: 'Variedad de marcas y sabores. En formato de 1,5 hasta 3 litros.'
+        },
+        {
+            _id: '8',
+            name: 'confitados',
+            price: 100,
+            category: 'cucuruchos',
+            image: '../images/confitados.png',
+            aditional: '../images/altsimple.png',
+            description: 'Combine el mejor helado con el mejor chocolate.',
         },
     ]
 };
