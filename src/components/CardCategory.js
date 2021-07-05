@@ -3,12 +3,15 @@ import { Link } from 'react-router-dom';
 
 export default function CardCategory(props) {
 
+    /*Custom class Styles depending of the props sent by the parent*/
     let productClass = '';
     if (props.detail) {
         productClass = ' product-image'
     };
     const cardClass = "card-image";
     const cardStyle = cardClass + productClass;
+
+
     return (
         <div className="card-box">
             {props.typeCategory ?

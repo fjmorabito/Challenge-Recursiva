@@ -7,11 +7,15 @@ import ModalDetail from '../components/ModalDetail';
 
 export default function PaymentScreen() {
 
+    /*Variables for navegation and different buttons text fields*/
     const nextPage = "/";
     const previousPage = "/shop/1";
     const content = 'pagar';
 
+    /*Template to show on Modal*/
     const detalleCompra = ["Simple", "Bañado", "Copa helada"]
+
+    /*Currencies part*/
     const ars = '1';
     const [currency, setCurrency] = useState(ars);
     const [dolar, setDolar] = useState('100');

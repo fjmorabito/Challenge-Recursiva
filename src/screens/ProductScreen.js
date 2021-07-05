@@ -4,8 +4,11 @@ import data from '../data.js';
 import Buttons from '../components/Buttons.js';
 
 export default function ProductScreen() {
+    /*Search data of the product is made by the parameter in the url*/
     const productId = window.location.pathname.split("/").pop();
     const product = (data.products.filter(product => product._id === productId))[0];
+
+    /*Variables for navegation*/
     const previousPage = '/shop/1';
     const content = "Volver";
 

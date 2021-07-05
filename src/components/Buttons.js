@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 export default function Buttons(props) {
+    /*Variables and const for the custom colors and redirection*/
     let colorClass = props.next;
     const goPage = props.page;
     const content = props.content;

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Modal } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
+/*Style for the Modal*/
 const useStyles = makeStyles((theme) => ({
     modal: {
         position: 'absolute',
@@ -15,7 +16,15 @@ const useStyles = makeStyles((theme) => ({
     },
     title: {
         marginBottom: '10px',
-        textDecoration: 'underline'
+        textDecoration: 'underline',
+        [theme.breakpoints.down('xs')]: {
+            fontSize: '13px',
+        }
+    },
+    liModal: {
+        [theme.breakpoints.down('xs')]: {
+            fontSize: '11px',
+        }
     }
 }));
 export default function ModalDetail(props) {
@@ -30,6 +39,7 @@ export default function ModalDetail(props) {
         setModal(!modal);
     }
 
+    /*Body of the Modal*/
     const body = (
         < div className={styles.modal} >
             <h2 className={styles.title}>Detalle de la compra</h2>
